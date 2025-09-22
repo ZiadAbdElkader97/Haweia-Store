@@ -10,7 +10,6 @@ import {
   IconMail,
   IconTicket,
   IconEdit,
-  IconCurrencyDollar,
   IconApps,
   IconFileDescription,
   IconFileDots,
@@ -26,7 +25,6 @@ import {
   IconUserCircle,
   IconPackage,
   IconMessage2,
-  IconBasket,
   IconChartLine,
   IconChartArcs,
   IconChartCandle,
@@ -39,16 +37,13 @@ import {
   IconRotate,
   IconShoppingCart,
   IconAperture,
-  IconLayout,
   IconSettings,
-  IconHelp,
   IconZoomCode,
   IconBoxAlignBottom,
   IconBoxAlignLeft,
   IconBorderStyle2,
   IconAppWindow,
   IconNotebook,
-  IconFileCheck,
   IconChartHistogram,
   IconChartPie2,
   IconChartScatter,
@@ -63,9 +58,6 @@ import {
   IconTrademark,
   IconDiscount2,
   IconStars,
-  IconLifebuoy,
-  IconQuestionMark,
-  IconShieldLock,
   IconUsers,
   IconCrown,
   IconKey,
@@ -73,6 +65,11 @@ import {
   IconIdBadge2,
   IconBuildingStore,
   IconBrandCodesandbox,
+  IconWorldMinus,
+  IconLanguage,
+  IconTarget,
+  IconCreditCard,
+  IconTruck,
 } from '@tabler/icons-react';
 
 const Menuitems = [
@@ -201,6 +198,20 @@ const Menuitems = [
     title: 'Orders',
     icon: IconShoppingCart,
     href: '/main-store/orders',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Pending',
+        icon: IconPoint,
+        href: '/orders/pending',
+      },
+      {
+        id: uniqueId(),
+        title: 'Received',
+        icon: IconPoint,
+        href: '/orders/received',
+      },
+    ],
   },
   {
     id: uniqueId(),
@@ -260,15 +271,23 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Inventory',
+    title: 'Warehouse',
     icon: IconBuildingWarehouse,
-    href: '/main-store/inventory',
-  },
-  {
-    id: uniqueId(),
-    title: 'Purchases',
-    icon: IconShoppingBag,
-    href: '/main-store/purchases',
+    href: '/main-store/warehouse',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Purchases',
+        icon: IconPoint,
+        href: '/warehouse/purchases',
+      },
+      {
+        id: uniqueId(),
+        title: 'Inventory',
+        icon: IconPoint,
+        href: '/warehouse/inventory',
+      },
+    ],
   },
   {
     id: uniqueId(),
@@ -317,6 +336,24 @@ const Menuitems = [
     icon: IconUsers,
     href: '/user-managment/all-users',
     children: [
+      {
+        id: uniqueId(),
+        title: 'Create New User',
+        icon: IconPoint,
+        href: '/all-users/create',
+      },
+      {
+        id: uniqueId(),
+        title: 'List Users',
+        icon: IconPoint,
+        href: '/all-users/list',
+      },
+      {
+        id: uniqueId(),
+        title: 'Deleted Users',
+        icon: IconPoint,
+        href: '/all-users/deleted',
+      },
       {
         id: uniqueId(),
         title: 'Admin Account Setting',
@@ -435,6 +472,90 @@ const Menuitems = [
     title: 'Teamwork Processes',
     icon: IconNotebook,
     href: '/apps/teamwork-processes',
+  },
+
+  {
+    navlabel: true,
+    subheader: 'Systems',
+  },
+  {
+    id: uniqueId(),
+    title: 'Domains',
+    icon: IconWorldMinus,
+    href: '/domains/',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Create Domain',
+        icon: IconPoint,
+        href: '/domains/create',
+      },
+      {
+        id: uniqueId(),
+        title: 'All Domains',
+        icon: IconPoint,
+        href: '/domains/all',
+      },
+      {
+        id: uniqueId(),
+        title: 'Custom Domains Requests',
+        icon: IconPoint,
+        href: '/domains/custom-domains-requests',
+      },
+    ],
+  },
+  {
+    id: uniqueId(),
+    title: 'Language',
+    icon: IconLanguage,
+    href: '/language/',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Create Language',
+        icon: IconPoint,
+        href: '/language/create',
+      },
+      {
+        id: uniqueId(),
+        title: 'Manage Language',
+        icon: IconPoint,
+        href: '/language/manage',
+      },
+    ],
+  },
+
+  {
+    id: uniqueId(),
+    title: 'Marketing tools',
+    icon: IconTarget,
+    href: '/marketing-tools',
+  },
+  {
+    id: uniqueId(),
+    title: 'Payment gateways',
+    icon: IconCreditCard,
+    href: '/payment-gateways',
+  },
+  {
+    id: uniqueId(),
+    title: 'Shipping',
+    icon: IconTruck,
+    href: '/shipping/',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Companies',
+        icon: IconPoint,
+        href: '/shipping/companies',
+      },
+      {
+        id: uniqueId(),
+        title: 'Matrix',
+        icon: IconPoint,
+        href: '/shipping/matrix',
+      },
+    ],
   },
 
   {
