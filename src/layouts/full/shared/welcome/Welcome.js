@@ -38,7 +38,7 @@ const Welcome = () => {
           sx={{ width: '100%', color: 'white' }}
         >
           <AlertTitle>Welcome To Haweia Store</AlertTitle>
-          Easy to customize the Template!!!
+          All You Need. Just a Click Away!!!
         </Alert>
       </Snackbar>
     </React.Fragment>

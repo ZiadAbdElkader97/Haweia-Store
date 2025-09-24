@@ -69,11 +69,11 @@ const EmployeeSalary = () => {
 
   return (
     <DashboardWidgetCard
-      title="Employee Salary"
+      title="Warehouse Analysis"
       subtitle="Every month"
-      dataLabel1="Salary"
+      dataLabel1="Cost Price"
       dataItem1="$36,358"
-      dataLabel2="Profit"
+      dataLabel2="Selling Price"
       dataItem2="$5,296"
     >
       <>

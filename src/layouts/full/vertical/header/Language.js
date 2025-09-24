@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { Avatar, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import { CustomizerContext } from 'src/context/CustomizerContext';
 import FlagEn from 'src/assets/images/flag/icon-flag-en.svg';
-import FlagFr from 'src/assets/images/flag/icon-flag-fr.svg';
-import FlagCn from 'src/assets/images/flag/icon-flag-cn.svg';
 import FlagSa from 'src/assets/images/flag/icon-flag-sa.svg';
 import { Stack } from '@mui/system';
 import { useTranslation } from 'react-i18next';
@@ -11,23 +9,12 @@ import { useEffect } from 'react';
 
 const Languages = [
   {
-    flagname: 'English (UK)',
+    flagname: 'English',
     icon: FlagEn,
     value: 'en',
   },
   {
-    flagname: '中国人 (Chinese)',
-    icon: FlagCn,
-    value: 'ch',
-  },
-  {
-    flagname: 'français (French)',
-    icon: FlagFr,
-    value: 'fr',
-  },
-
-  {
-    flagname: 'عربي (Arabic)',
+    flagname: 'Arabic',
     icon: FlagSa,
     value: 'ar',
   },
@@ -39,8 +26,7 @@ const Language = () => {
 
   const open = Boolean(anchorEl);
 
-  const currentLang =
-    Languages.find((_lang) => _lang.value === isLanguage) || Languages[1];
+  const currentLang = Languages.find((_lang) => _lang.value === isLanguage) || Languages[1];
   const { i18n } = useTranslation();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -76,11 +62,7 @@ const Language = () => {
         }}
       >
         {Languages.map((option, index) => (
-          <MenuItem
-            key={index}
-            sx={{ py: 2, px: 3 }}
-            onClick={() => setIsLanguage(option.value)}
-          >
+          <MenuItem key={index} sx={{ py: 2, px: 3 }} onClick={() => setIsLanguage(option.value)}>
             <Stack direction="row" spacing={1} alignItems="center">
               <Avatar src={option.icon} alt={option.icon} sx={{ width: 20, height: 20 }} />
               <Typography> {option.flagname}</Typography>

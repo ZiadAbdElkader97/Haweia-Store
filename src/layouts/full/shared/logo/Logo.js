@@ -6,7 +6,7 @@ import { ReactComponent as LogoDarkRTL } from 'src/assets/images/logos/dark-rtl-
 import { ReactComponent as LogoLight } from 'src/assets/images/logos/light-logo.svg';
 import { ReactComponent as LogoLightRTL } from 'src/assets/images/logos/light-logo-rtl.svg';
 import { styled } from '@mui/material';
-import { useContext } from 'react'
+import { useContext } from 'react';
 
 const Logo = () => {
   const { isCollapse, isSidebarHover, activeDir, activeMode } = useContext(CustomizerContext);
@@ -14,35 +14,33 @@ const Logo = () => {
 
   const LinkStyled = styled(Link)(() => ({
     height: TopbarHeight,
-    width: isCollapse == "mini-sidebar" && !isSidebarHover ? '40px' : '180px',
+    width: isCollapse == 'mini-sidebar' && !isSidebarHover ? '40px' : '180px',
     overflow: 'hidden',
     display: 'block',
   }));
 
   if (activeDir === 'ltr') {
     return (
-      <LinkStyled to="/" style={{
-        display: 'flex',
-        alignItems: 'center',
-      }}>
-        {activeMode === 'dark' ? (
-          <LogoLight />
-        ) : (
-          <LogoDark />
-        )}
+      <LinkStyled
+        to="/"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        {activeMode === 'dark' ? <LogoLight /> : <LogoDark />}
       </LinkStyled>
     );
   }
   return (
-    <LinkStyled to="/" style={{
-      display: 'flex',
-      alignItems: 'center',
-    }}>
-      {activeMode === 'dark' ? (
-        <LogoDarkRTL />
-      ) : (
-        <LogoLightRTL />
-      )}
+    <LinkStyled
+      to="/"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      {activeMode === 'dark' ? <LogoDarkRTL /> : <LogoLightRTL />}
     </LinkStyled>
   );
 };

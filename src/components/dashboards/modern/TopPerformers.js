@@ -29,7 +29,7 @@ const TopPerformers = () => {
 
   return (
     <DashboardCard
-      title="Top Projects"
+      title="Top Domains"
       subtitle="Best Products"
       action={
         <CustomSelect

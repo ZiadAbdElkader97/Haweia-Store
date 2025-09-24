@@ -2,47 +2,47 @@ import React from 'react';
 import { Box, CardContent, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 
-import icon1 from '../../../assets/images/svgs/icon-connect.svg';
-import icon2 from '../../../assets/images/svgs/icon-user-male.svg';
-import icon3 from '../../../assets/images/svgs/icon-briefcase.svg';
-import icon4 from '../../../assets/images/svgs/icon-mailbox.svg';
-import icon5 from '../../../assets/images/svgs/icon-favorites.svg';
-import icon6 from '../../../assets/images/svgs/icon-speech-bubble.svg';
+import icon1 from '../../../assets/images/svgs/tickets.svg';
+import icon2 from '../../../assets/images/svgs/users.svg';
+import icon3 from '../../../assets/images/svgs/customers.svg';
+import icon4 from '../../../assets/images/svgs/products.svg';
+import icon5 from '../../../assets/images/svgs/orders.svg';
+import icon6 from '../../../assets/images/svgs/emails.svg';
 
 const topcards = [
   {
     icon: icon2,
-    title: 'Employees',
+    title: 'Users',
     digits: '96',
     bgcolor: 'primary',
   },
   {
     icon: icon3,
-    title: 'Clients',
+    title: 'Customers',
     digits: '3,650',
     bgcolor: 'warning',
   },
   {
     icon: icon4,
-    title: 'Projects',
+    title: 'Products',
     digits: '356',
     bgcolor: 'secondary',
   },
   {
     icon: icon5,
-    title: 'Events',
+    title: 'Orders',
     digits: '696',
     bgcolor: 'error',
   },
   {
     icon: icon6,
-    title: 'Payroll',
-    digits: '$96k',
+    title: 'Emails',
+    digits: '44',
     bgcolor: 'success',
   },
   {
     icon: icon1,
-    title: 'Reports',
+    title: 'Tickets',
     digits: '59',
     bgcolor: 'info',
   },

@@ -70,7 +70,7 @@ const Customers = () => {
     >
       <>
         <Typography variant="subtitle2" color="textSecondary">
-          Customers
+          Customer statistics
         </Typography>
         <Typography variant="h4">36,358</Typography>
         <Stack direction="row" spacing={1} mt={1} alignItems="center">
